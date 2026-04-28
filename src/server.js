@@ -1,18 +1,6 @@
 require('dotenv').config();
-
-const cors = require('cors');
 const app = require('./app');
 const prisma = require('./config/prisma');
-
-// 🔥 CORS (antes das rotas)
-app.use(cors({
-  origin: 'https://desabandonefocinhos-front.vercel.app',
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  credentials: true
-}));
-
-// 🔥 Preflight (evita erro em algumas requisições)
-app.options('*', cors());
 
 const PORT = process.env.PORT || 3000;
 
@@ -26,7 +14,7 @@ const startServer = async () => {
     }
 
     app.listen(PORT, () => {
-      console.log(`✅ Backend rodando na porta: ${PORT}`);
+      console.log(`✅ Backend rodando em: http://localhost:${PORT}`);
     });
   } catch (error) {
     console.error('❌ Falha ao iniciar o servidor:', error);

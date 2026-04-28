@@ -2,7 +2,7 @@
   "name": "petz-api",
   "version": "1.0.0",
   "description": "🐾 Patas Perdidas\r Sistema web para gestão de ONGs de proteção animal, facilitando o cadastro de organizações, busca de animais perdidos e processo de adoção.",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
